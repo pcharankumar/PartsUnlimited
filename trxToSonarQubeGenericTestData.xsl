@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:b="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <xsl:param name="solutionFolder" />
-  <xsl:param name="projectName" />
+  <xsl:param name="PartsUnlimited/src/PartsUnlimitedWebsite" />
+  <xsl:param name="PartsUnlimited" />
 
 
 	<xsl:output method="xml" indent="yes" />	
