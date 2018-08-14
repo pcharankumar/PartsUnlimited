@@ -31,6 +31,40 @@ namespace CodedUITestProject1
             Playback.Wait(5000);
         }
 
+        [TestMethod]
+        public void CodedUITestMethod2()
+        {
+            var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
+            this.UIMap.SearchBrakes();
+
+            Playback.Wait(5000);
+        }
+
+        [TestMethod]
+        public void CodedUITestMethod3()
+        {
+            var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
+            Playback.Wait(5000);
+        }
+
+        [TestMethod]
+        public void SearchParts()
+        {
+            var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
+            Playback.Wait(5000);
+            this.UIMap.SearchParts();
+
+        }
+
+        [TestMethod]
+        public void VerifyMenus()
+        {
+            var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
+            Playback.Wait(5000);
+            this.UIMap.VerifyMenuOptions();
+
+
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:
