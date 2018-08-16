@@ -32,7 +32,9 @@ namespace CodedUITestProject1
         }
 
         [TestMethod]
+
         public void SearchingBrakes()
+
         {
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             this.UIMap.SearchBrakes();
@@ -41,6 +43,7 @@ namespace CodedUITestProject1
         }
 
         [TestMethod]
+
         public void RegisterUser()
         {
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
@@ -55,7 +58,6 @@ namespace CodedUITestProject1
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             Playback.Wait(5000);
             this.UIMap.LoginUser1();
-
         }
 
         [TestMethod]
@@ -64,7 +66,6 @@ namespace CodedUITestProject1
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             Playback.Wait(5000);
             this.UIMap.SearchParts();
-
         }
 
         [TestMethod]
@@ -73,8 +74,6 @@ namespace CodedUITestProject1
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             Playback.Wait(5000);
             this.UIMap.VerifyMenuOptions();
-
-
         }
         #region Additional test attributes
 

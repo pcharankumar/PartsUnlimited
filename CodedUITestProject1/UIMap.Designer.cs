@@ -149,6 +149,7 @@ namespace CodedUITestProject1
             Mouse.Click(uIBatteriesHyperlink, new Point(23, 16));
         }
         
+
         /// <summary>
         /// RegiesterNewUser - Use 'RegiesterNewUserParams' to pass parameters into this method.
         /// </summary>
@@ -213,6 +214,7 @@ namespace CodedUITestProject1
             Mouse.Click(uILoginButton, new Point(56, 26));
         }
         
+
         #region Properties
         public virtual SearchBrakesParams SearchBrakesParams
         {
@@ -238,6 +240,7 @@ namespace CodedUITestProject1
             }
         }
         
+
         public virtual RegiesterNewUserParams RegiesterNewUserParams
         {
             get
@@ -262,6 +265,7 @@ namespace CodedUITestProject1
             }
         }
         
+
         public UINewtabInternetExplorWindow UINewtabInternetExplorWindow
         {
             get
@@ -292,10 +296,11 @@ namespace CodedUITestProject1
         
         private SearchPartsParams mSearchPartsParams;
         
+
         private RegiesterNewUserParams mRegiesterNewUserParams;
         
         private LoginUser1Params mLoginUser1Params;
-        
+
         private UINewtabInternetExplorWindow mUINewtabInternetExplorWindow;
         
         private UIItemWindow1 mUIItemWindow;
@@ -342,6 +347,7 @@ namespace CodedUITestProject1
         #endregion
     }
     
+
     /// <summary>
     /// Parameters to be passed into 'RegiesterNewUser'
     /// </summary>
@@ -391,7 +397,7 @@ namespace CodedUITestProject1
         public string UIPasswordEditPassword = "vK0aSlL2f8kWswmZ0ZG6DK0D9HO/5DtG";
         #endregion
     }
-    
+
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
     public class UINewtabInternetExplorWindow : BrowserWindow
     {
@@ -405,8 +411,10 @@ namespace CodedUITestProject1
             this.WindowTitles.Add("Home Page – Parts Unlimited");
             this.WindowTitles.Add("– Parts Unlimited");
             this.WindowTitles.Add("Browse Products – Parts Unlimited");
+
             this.WindowTitles.Add("Log in – Parts Unlimited");
             this.WindowTitles.Add("Register – Parts Unlimited");
+
             #endregion
         }
         
@@ -535,6 +543,7 @@ namespace CodedUITestProject1
                 return this.mUIBrowseProductsPartsUDocument2;
             }
         }
+
         
         public UILoginPartsUnlimitedDocument UILoginPartsUnlimitedDocument
         {
@@ -559,6 +568,7 @@ namespace CodedUITestProject1
                 return this.mUIRegisterPartsUnlimitDocument;
             }
         }
+
         #endregion
         
         #region Fields
@@ -581,10 +591,12 @@ namespace CodedUITestProject1
         private UIBrowseProductsPartsUDocument1 mUIBrowseProductsPartsUDocument1;
         
         private UIBrowseProductsPartsUDocument2 mUIBrowseProductsPartsUDocument2;
+
         
         private UILoginPartsUnlimitedDocument mUILoginPartsUnlimitedDocument;
         
         private UIRegisterPartsUnlimitDocument mUIRegisterPartsUnlimitDocument;
+
         #endregion
     }
     
@@ -859,6 +871,7 @@ namespace CodedUITestProject1
                 return this.mUIBatteriesHyperlink;
             }
         }
+
         
         public HtmlHyperlink UILoginHyperlink
         {
@@ -884,6 +897,7 @@ namespace CodedUITestProject1
                 return this.mUILoginHyperlink;
             }
         }
+
         #endregion
         
         #region Fields
@@ -898,8 +912,10 @@ namespace CodedUITestProject1
         private HtmlHyperlink mUIWheelsTiresHyperlink;
         
         private HtmlHyperlink mUIBatteriesHyperlink;
+
         
         private HtmlHyperlink mUILoginHyperlink;
+
         #endregion
     }
     
@@ -1241,6 +1257,7 @@ namespace CodedUITestProject1
     }
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+
     public class UILoginPartsUnlimitedDocument : HtmlDocument
     {
         
@@ -1564,6 +1581,7 @@ namespace CodedUITestProject1
     }
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+
     public class UIItemWindow1 : WinWindow
     {
         
