@@ -15,7 +15,7 @@ namespace CodedUITestProject1
         }
 
         [TestMethod]
-        public void CodedUITestMethod1()
+        public void LaunchPartsUnlimtedURL()
         {
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             if (PUBrowser.Exists)
@@ -32,7 +32,7 @@ namespace CodedUITestProject1
         }
 
         [TestMethod]
-        public void CodedUITestMethod2()
+        public void SearchingBrakes()
         {
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             this.UIMap.SearchBrakes();
@@ -41,10 +41,21 @@ namespace CodedUITestProject1
         }
 
         [TestMethod]
-        public void CodedUITestMethod3()
+        public void RegisterUser()
         {
             var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
             Playback.Wait(5000);
+            this.UIMap.RegiesterNewUser();
+
+        }
+
+        [TestMethod]
+        public void LoginUser()
+        {
+            var PUBrowser = BrowserWindow.Launch("https://pupsi.azurewebsites.net/");
+            Playback.Wait(5000);
+            this.UIMap.LoginUser1();
+
         }
 
         [TestMethod]

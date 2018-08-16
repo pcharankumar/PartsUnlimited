@@ -149,6 +149,70 @@ namespace CodedUITestProject1
             Mouse.Click(uIBatteriesHyperlink, new Point(23, 16));
         }
         
+        /// <summary>
+        /// RegiesterNewUser - Use 'RegiesterNewUserParams' to pass parameters into this method.
+        /// </summary>
+        public void RegiesterNewUser()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uILoginHyperlink = this.UINewtabInternetExplorWindow.UIHomePagePartsUnlimitDocument.UILoginHyperlink;
+            HtmlHyperlink uIRegisterasanewuserHyperlink = this.UINewtabInternetExplorWindow.UILoginPartsUnlimitedDocument.UILoginpanelPane.UIRegisterasanewuserHyperlink;
+            HtmlEdit uIEmailEdit = this.UINewtabInternetExplorWindow.UIRegisterPartsUnlimitDocument.UIEmailEdit;
+            HtmlEdit uIPasswordEdit = this.UINewtabInternetExplorWindow.UIRegisterPartsUnlimitDocument.UIPasswordEdit;
+            HtmlEdit uIConfirmPasswordEdit = this.UINewtabInternetExplorWindow.UIRegisterPartsUnlimitDocument.UIConfirmPasswordEdit;
+            HtmlInputButton uIRegisterButton = this.UINewtabInternetExplorWindow.UIRegisterPartsUnlimitDocument.UIRegisterpageCustom.UIRegisterButton;
+            #endregion
+
+            // Click 'Log in' link
+            Mouse.Click(uILoginHyperlink, new Point(18, 23));
+
+            // Click 'Register as a new user' link
+            Mouse.Click(uIRegisterasanewuserHyperlink, new Point(71, 10));
+
+            // Type 'charan.4u22@gmail.com' in 'Email' text box
+            uIEmailEdit.Text = this.RegiesterNewUserParams.UIEmailEditText;
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit.Password = this.RegiesterNewUserParams.UIPasswordEditPassword;
+
+            // Type '********' in 'ConfirmPassword' text box
+            uIConfirmPasswordEdit.Password = this.RegiesterNewUserParams.UIConfirmPasswordEditPassword;
+
+            // Click 'Register' button
+            Mouse.Click(uIRegisterButton, new Point(64, 19));
+        }
+        
+        /// <summary>
+        /// LoginUser1 - Use 'LoginUser1Params' to pass parameters into this method.
+        /// </summary>
+        public void LoginUser1()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uILoginHyperlink = this.UINewtabInternetExplorWindow.UIHomePagePartsUnlimitDocument.UILoginHyperlink;
+            HtmlEdit uIEmailEdit = this.UINewtabInternetExplorWindow.UILoginPartsUnlimitedDocument.UIEmailEdit;
+            HtmlEdit uIPasswordEdit = this.UINewtabInternetExplorWindow.UILoginPartsUnlimitedDocument.UIPasswordEdit;
+            HtmlInputButton uILoginButton = this.UINewtabInternetExplorWindow.UILoginPartsUnlimitedDocument.UILoginpanelPane.UILoginButton;
+            #endregion
+
+            // Click 'Log in' link
+            Mouse.Click(uILoginHyperlink, new Point(21, 36));
+
+            // Click 'Log in' link
+            Mouse.Click(uILoginHyperlink, new Point(31, 43));
+
+            // Type 'charan.4u22@gmail.com' in 'Email' text box
+            uIEmailEdit.Text = this.LoginUser1Params.UIEmailEditText;
+
+            // Type '' in 'Password' text box
+            uIPasswordEdit.Text = this.LoginUser1Params.UIPasswordEditText;
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit.Password = this.LoginUser1Params.UIPasswordEditPassword;
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(56, 26));
+        }
+        
         #region Properties
         public virtual SearchBrakesParams SearchBrakesParams
         {
@@ -171,6 +235,30 @@ namespace CodedUITestProject1
                     this.mSearchPartsParams = new SearchPartsParams();
                 }
                 return this.mSearchPartsParams;
+            }
+        }
+        
+        public virtual RegiesterNewUserParams RegiesterNewUserParams
+        {
+            get
+            {
+                if ((this.mRegiesterNewUserParams == null))
+                {
+                    this.mRegiesterNewUserParams = new RegiesterNewUserParams();
+                }
+                return this.mRegiesterNewUserParams;
+            }
+        }
+        
+        public virtual LoginUser1Params LoginUser1Params
+        {
+            get
+            {
+                if ((this.mLoginUser1Params == null))
+                {
+                    this.mLoginUser1Params = new LoginUser1Params();
+                }
+                return this.mLoginUser1Params;
             }
         }
         
@@ -203,6 +291,10 @@ namespace CodedUITestProject1
         private SearchBrakesParams mSearchBrakesParams;
         
         private SearchPartsParams mSearchPartsParams;
+        
+        private RegiesterNewUserParams mRegiesterNewUserParams;
+        
+        private LoginUser1Params mLoginUser1Params;
         
         private UINewtabInternetExplorWindow mUINewtabInternetExplorWindow;
         
@@ -250,6 +342,56 @@ namespace CodedUITestProject1
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'RegiesterNewUser'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class RegiesterNewUserParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'charan.4u22@gmail.com' in 'Email' text box
+        /// </summary>
+        public string UIEmailEditText = "charan.4u22@gmail.com";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditPassword = "vK0aSlL2f8kWswmZ0ZG6DK0D9HO/5DtG";
+        
+        /// <summary>
+        /// Type '********' in 'ConfirmPassword' text box
+        /// </summary>
+        public string UIConfirmPasswordEditPassword = "vK0aSlL2f8kWswmZ0ZG6DK0D9HO/5DtG";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'LoginUser1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class LoginUser1Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'charan.4u22@gmail.com' in 'Email' text box
+        /// </summary>
+        public string UIEmailEditText = "charan.4u22@gmail.com";
+        
+        /// <summary>
+        /// Type '' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditText = "";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditPassword = "vK0aSlL2f8kWswmZ0ZG6DK0D9HO/5DtG";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
     public class UINewtabInternetExplorWindow : BrowserWindow
     {
@@ -263,6 +405,8 @@ namespace CodedUITestProject1
             this.WindowTitles.Add("Home Page – Parts Unlimited");
             this.WindowTitles.Add("– Parts Unlimited");
             this.WindowTitles.Add("Browse Products – Parts Unlimited");
+            this.WindowTitles.Add("Log in – Parts Unlimited");
+            this.WindowTitles.Add("Register – Parts Unlimited");
             #endregion
         }
         
@@ -391,6 +535,30 @@ namespace CodedUITestProject1
                 return this.mUIBrowseProductsPartsUDocument2;
             }
         }
+        
+        public UILoginPartsUnlimitedDocument UILoginPartsUnlimitedDocument
+        {
+            get
+            {
+                if ((this.mUILoginPartsUnlimitedDocument == null))
+                {
+                    this.mUILoginPartsUnlimitedDocument = new UILoginPartsUnlimitedDocument(this);
+                }
+                return this.mUILoginPartsUnlimitedDocument;
+            }
+        }
+        
+        public UIRegisterPartsUnlimitDocument UIRegisterPartsUnlimitDocument
+        {
+            get
+            {
+                if ((this.mUIRegisterPartsUnlimitDocument == null))
+                {
+                    this.mUIRegisterPartsUnlimitDocument = new UIRegisterPartsUnlimitDocument(this);
+                }
+                return this.mUIRegisterPartsUnlimitDocument;
+            }
+        }
         #endregion
         
         #region Fields
@@ -413,6 +581,10 @@ namespace CodedUITestProject1
         private UIBrowseProductsPartsUDocument1 mUIBrowseProductsPartsUDocument1;
         
         private UIBrowseProductsPartsUDocument2 mUIBrowseProductsPartsUDocument2;
+        
+        private UILoginPartsUnlimitedDocument mUILoginPartsUnlimitedDocument;
+        
+        private UIRegisterPartsUnlimitDocument mUIRegisterPartsUnlimitDocument;
         #endregion
     }
     
@@ -687,6 +859,31 @@ namespace CodedUITestProject1
                 return this.mUIBatteriesHyperlink;
             }
         }
+        
+        public HtmlHyperlink UILoginHyperlink
+        {
+            get
+            {
+                if ((this.mUILoginHyperlink == null))
+                {
+                    this.mUILoginHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = "login-link";
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Log in";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Account/Login";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "https://pupsi.azurewebsites.net/Account/Login";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = "head-link";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "class=\"head-link\" id=\"login-link\" href=\"";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "6";
+                    this.mUILoginHyperlink.WindowTitles.Add("Home Page – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUILoginHyperlink;
+            }
+        }
         #endregion
         
         #region Fields
@@ -701,6 +898,8 @@ namespace CodedUITestProject1
         private HtmlHyperlink mUIWheelsTiresHyperlink;
         
         private HtmlHyperlink mUIBatteriesHyperlink;
+        
+        private HtmlHyperlink mUILoginHyperlink;
         #endregion
     }
     
@@ -1038,6 +1237,329 @@ namespace CodedUITestProject1
         
         #region Fields
         private HtmlHyperlink mUIHomeHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UILoginPartsUnlimitedDocument : HtmlDocument
+    {
+        
+        public UILoginPartsUnlimitedDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Log in – Parts Unlimited";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Account/Login";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "https://pupsi.azurewebsites.net/Account/Login";
+            this.WindowTitles.Add("Log in – Parts Unlimited");
+            #endregion
+        }
+        
+        #region Properties
+        public UILoginpanelPane UILoginpanelPane
+        {
+            get
+            {
+                if ((this.mUILoginpanelPane == null))
+                {
+                    this.mUILoginpanelPane = new UILoginpanelPane(this);
+                }
+                return this.mUILoginpanelPane;
+            }
+        }
+        
+        public HtmlEdit UIEmailEdit
+        {
+            get
+            {
+                if ((this.mUIEmailEdit == null))
+                {
+                    this.mUIEmailEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIEmailEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Email";
+                    this.mUIEmailEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Email";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "form-control";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Email\" class=\"form-control\" id=\"Em";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "6";
+                    this.mUIEmailEdit.WindowTitles.Add("Log in – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIEmailEdit;
+            }
+        }
+        
+        public HtmlEdit UIPasswordEdit
+        {
+            get
+            {
+                if ((this.mUIPasswordEdit == null))
+                {
+                    this.mUIPasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Password";
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Password";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "form-control";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Password\" class=\"form-control\" id=";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "7";
+                    this.mUIPasswordEdit.WindowTitles.Add("Log in – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIPasswordEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UILoginpanelPane mUILoginpanelPane;
+        
+        private HtmlEdit mUIEmailEdit;
+        
+        private HtmlEdit mUIPasswordEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UILoginpanelPane : HtmlDiv
+    {
+        
+        public UILoginpanelPane(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "login-panel";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Registered Customers\r\n\r\n \r\n\r\n\r\n  \r\n\r\n\r\n\r";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"login-panel\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "20";
+            this.WindowTitles.Add("Log in – Parts Unlimited");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlHyperlink UIRegisterasanewuserHyperlink
+        {
+            get
+            {
+                if ((this.mUIRegisterasanewuserHyperlink == null))
+                {
+                    this.mUIRegisterasanewuserHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIRegisterasanewuserHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIRegisterasanewuserHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIRegisterasanewuserHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIRegisterasanewuserHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Register as a new user";
+                    this.mUIRegisterasanewuserHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Account/Register";
+                    this.mUIRegisterasanewuserHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIRegisterasanewuserHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "https://pupsi.azurewebsites.net/Account/Register";
+                    this.mUIRegisterasanewuserHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = "action-link";
+                    this.mUIRegisterasanewuserHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "class=\"action-link\" href=\"/Account/Regis";
+                    this.mUIRegisterasanewuserHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
+                    this.mUIRegisterasanewuserHyperlink.WindowTitles.Add("Log in – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIRegisterasanewuserHyperlink;
+            }
+        }
+        
+        public HtmlInputButton UILoginButton
+        {
+            get
+            {
+                if ((this.mUILoginButton == null))
+                {
+                    this.mUILoginButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Login";
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Class] = "btn btn-default";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "class=\"btn btn-default\" type=\"submit\" va";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "6";
+                    this.mUILoginButton.WindowTitles.Add("Log in – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUILoginButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlHyperlink mUIRegisterasanewuserHyperlink;
+        
+        private HtmlInputButton mUILoginButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIRegisterPartsUnlimitDocument : HtmlDocument
+    {
+        
+        public UIRegisterPartsUnlimitDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Register – Parts Unlimited";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Account/Register";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "https://pupsi.azurewebsites.net/Account/Register";
+            this.WindowTitles.Add("Register – Parts Unlimited");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlEdit UIEmailEdit
+        {
+            get
+            {
+                if ((this.mUIEmailEdit == null))
+                {
+                    this.mUIEmailEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIEmailEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Email";
+                    this.mUIEmailEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Email";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "form-control";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Email\" class=\"form-control\" id=\"Em";
+                    this.mUIEmailEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "6";
+                    this.mUIEmailEdit.WindowTitles.Add("Register – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIEmailEdit;
+            }
+        }
+        
+        public HtmlEdit UIPasswordEdit
+        {
+            get
+            {
+                if ((this.mUIPasswordEdit == null))
+                {
+                    this.mUIPasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Password";
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Password";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "form-control";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Password\" class=\"form-control\" id=";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "7";
+                    this.mUIPasswordEdit.WindowTitles.Add("Register – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIPasswordEdit;
+            }
+        }
+        
+        public HtmlEdit UIConfirmPasswordEdit
+        {
+            get
+            {
+                if ((this.mUIConfirmPasswordEdit == null))
+                {
+                    this.mUIConfirmPasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIConfirmPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "ConfirmPassword";
+                    this.mUIConfirmPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ConfirmPassword";
+                    this.mUIConfirmPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIConfirmPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIConfirmPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIConfirmPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "form-control";
+                    this.mUIConfirmPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ConfirmPassword\" class=\"form-contr";
+                    this.mUIConfirmPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "8";
+                    this.mUIConfirmPasswordEdit.WindowTitles.Add("Register – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIConfirmPasswordEdit;
+            }
+        }
+        
+        public UIRegisterpageCustom UIRegisterpageCustom
+        {
+            get
+            {
+                if ((this.mUIRegisterpageCustom == null))
+                {
+                    this.mUIRegisterpageCustom = new UIRegisterpageCustom(this);
+                }
+                return this.mUIRegisterpageCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlEdit mUIEmailEdit;
+        
+        private HtmlEdit mUIPasswordEdit;
+        
+        private HtmlEdit mUIConfirmPasswordEdit;
+        
+        private UIRegisterpageCustom mUIRegisterpageCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIRegisterpageCustom : HtmlCustom
+    {
+        
+        public UIRegisterpageCustom(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties["TagName"] = "SECTION";
+            this.SearchProperties["Id"] = "register-page";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
+            this.FilterProperties["Class"] = null;
+            this.FilterProperties["ControlDefinition"] = "id=\"register-page\"";
+            this.FilterProperties["TagInstance"] = "1";
+            this.WindowTitles.Add("Register – Parts Unlimited");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlInputButton UIRegisterButton
+        {
+            get
+            {
+                if ((this.mUIRegisterButton == null))
+                {
+                    this.mUIRegisterButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Register";
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.Class] = "btn btn-default";
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "class=\"btn btn-default\" type=\"submit\" va";
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "5";
+                    this.mUIRegisterButton.WindowTitles.Add("Register – Parts Unlimited");
+                    #endregion
+                }
+                return this.mUIRegisterButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlInputButton mUIRegisterButton;
         #endregion
     }
     
