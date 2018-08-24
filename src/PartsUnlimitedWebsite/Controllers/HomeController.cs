@@ -83,7 +83,7 @@ public ActionResult Recomendations()
         }
         //stubbing in a recomendations action
 
-        
+        public void demo2() { }
 
         private List<Product> GetNewProducts(int count)
         {
