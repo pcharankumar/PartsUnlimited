@@ -81,15 +81,17 @@ public ActionResult Recomendations()
 
             return View();
         }
-        
-        public ActionResult Recomendations1()
+
+
+        public ActionResult Recomendation2()
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
 
             // Group the order details by product and return
             // the products the top recomendations for the recomendations page
-            
+
+       
             int count = 0;
             while (count < roco_count
                    ) 
