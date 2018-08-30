@@ -100,10 +100,30 @@ public ActionResult Recomendations()
                     .ToList();
             }
 
+            public ActionResult Recomendation14()
+            {
+                ViewBag.Message = "Your application description page.";
+                //See file /home/Recomendations.cshtml for initial rendering
 
-            return View();
+                // Group the order details by product and return
+                // the products the top recomendations for the recomendations page
+
+                int count = 0;
+                while (count < roco_count
+                       )
+                {
+                    _db.Products
+                        .OrderByDescending(a => a.OrderDetails.Count())
+                        .Take(count++)
+                        .ToList();
+                }
+
+
+                return View();
         }
         //stubbing in a recomendations action
+
+            public void demos() { }
 
         private List<Product> GetNewProducts(int count)
         {
