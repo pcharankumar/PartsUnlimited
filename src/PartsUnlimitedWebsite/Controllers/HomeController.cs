@@ -81,9 +81,8 @@ public ActionResult Recomendations()
 
             return View();
         }
-        //stubbing in a recomendations action
-
-        public ActionResult Recomendations3()
+        
+        public ActionResult Recomendation13()
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
@@ -100,9 +99,12 @@ public ActionResult Recomendations()
                     .Take(count++)
                     .ToList();
             }
+
+
             return View();
         }
-        public ActionResult Recomendations301()
+
+        public ActionResult Recomendation16()
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
@@ -119,8 +121,33 @@ public ActionResult Recomendations()
                     .Take(count++)
                     .ToList();
             }
+
+
             return View();
         }
+
+        public ActionResult Recomendation26()
+        {
+            ViewBag.Message = "Your application description page.";
+            //See file /home/Recomendations.cshtml for initial rendering
+
+            // Group the order details by product and return
+            // the products the top recomendations for the recomendations page
+
+            int count = 0;
+            while (count < roco_count
+                   )
+            {
+                _db.Products
+                    .OrderByDescending(a => a.OrderDetails.Count())
+                    .Take(count++)
+                    .ToList();
+            }
+
+
+            return View();
+        }
+
 
         public ActionResult Recomendations302()
         {
@@ -142,6 +169,10 @@ public ActionResult Recomendations()
             return View();
         }
         public void demos2() { }
+
+        //stubbing in a recomendations action
+
+
         public void demos() { }
         private List<Product> GetNewProducts(int count)
         {
