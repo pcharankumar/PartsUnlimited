@@ -1,7 +1,7 @@
 {
   "ServerUri": "http://192.168.5.7:9000/",
   "Organization": null,
-  "ProjectKey": "SonarAnalysisVSIDE",
+  "ProjectKey": "SonarVSTSAnalysisPR",
   "Profiles": {
     "CSharp": {
       "ProfileKey": "AWYK4fuA6WCGtHhwuNIc",
