@@ -82,7 +82,7 @@ public ActionResult Recomendations()
             return View();
         }
 
-        public ActionResult Recomendations320()
+        public ActionResult Recomendations331()
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
@@ -104,7 +104,7 @@ public ActionResult Recomendations()
             return View();
         }
 
-        public ActionResult Recomendations321()
+        public ActionResult Recomendations332()
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
@@ -120,53 +120,6 @@ public ActionResult Recomendations()
                     .OrderByDescending(a => a.OrderDetails.Count())
                     .Take(count++)
                     .ToList();
-            
-            }
-
-
-            return View();
-        }
-
-        public ActionResult Recomendations3231()
-        {
-            ViewBag.Message = "Your application description page.";
-            //See file /home/Recomendations.cshtml for initial rendering
-
-            // Group the order details by product and return
-            // the products the top recomendations for the recomendations page
-
-            int count = 0;
-            while (count < roco_count
-                   )
-            {
-                _db.Products
-                    .OrderByDescending(a => a.OrderDetails.Count())
-                    .Take(count++)
-                    .ToList();
-
-            }
-
-
-            return View();
-        }
-
-        public ActionResult Recomendations3232()
-        {
-            ViewBag.Message = "Your application description page.";
-            //See file /home/Recomendations.cshtml for initial rendering
-
-            // Group the order details by product and return
-            // the products the top recomendations for the recomendations page
-
-            int count = 0;
-            while (count < roco_count
-                   )
-            {
-                _db.Products
-                    .OrderByDescending(a => a.OrderDetails.Count())
-                    .Take(count++)
-                    .ToList();
-
             }
 
 
