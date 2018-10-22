@@ -1,3 +1,9 @@
+Set-ExecutionPolicy Unrestricted
+Install-Module PSExcel
+Import-Module PSExcel
+Install-Module Export-Excel
+Install-Module -Name ImportExcel
+
 #Declare Variaqbles for files
 $Date = (Get-Date).ToString("yyyyMMdd-HHmmss")
 $FilePath = "D:\GiecoDemo\SonarReports\"
