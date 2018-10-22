@@ -1,5 +1,5 @@
 #Set-ExecutionPolicy -Scope CurrentUser
-Install-Module PSExcel
+Install-Module PSExcel -Scope CurrentUser
 Import-Module PSExcel
 Install-Module Export-Excel
 Install-Module -Name ImportExcel
