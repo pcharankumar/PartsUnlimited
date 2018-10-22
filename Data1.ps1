@@ -1,4 +1,4 @@
-Set-ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -Scope CurrentUser
 Install-Module PSExcel
 Import-Module PSExcel
 Install-Module Export-Excel
