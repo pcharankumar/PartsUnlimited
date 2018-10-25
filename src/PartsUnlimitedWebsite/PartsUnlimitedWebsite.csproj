@@ -25,6 +25,8 @@
     <UseGlobalApplicationHostFile />
     <ApplicationInsightsResourceId>/subscriptions/56fc2374-b7e8-4c14-b15c-a191b635762a/resourcegroups/PartsWeb/providers/microsoft.insights/components/partswebinsights</ApplicationInsightsResourceId>
     <Use64BitIISExpress />
+    <SonarQubeTestProject>
+    </SonarQubeTestProject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,10 +35,11 @@
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
     <CodeAnalysisRuleSet>PartsUnlimitedWebsite.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RunCodeAnalysis>true</RunCodeAnalysis>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
