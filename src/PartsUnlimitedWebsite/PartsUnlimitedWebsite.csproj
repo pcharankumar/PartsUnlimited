@@ -24,6 +24,9 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <UseGlobalApplicationHostFile />
     <ApplicationInsightsResourceId>/subscriptions/56fc2374-b7e8-4c14-b15c-a191b635762a/resourcegroups/PartsWeb/providers/microsoft.insights/components/partswebinsights</ApplicationInsightsResourceId>
+
+    <Use64BitIISExpress />
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +36,10 @@
     <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>PartsUnlimitedWebsite.ruleset</CodeAnalysisRuleSet>
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
