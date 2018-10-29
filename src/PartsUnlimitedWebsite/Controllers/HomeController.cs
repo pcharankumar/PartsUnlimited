@@ -105,8 +105,6 @@ public ActionResult Recomendations()
         }
         //stubbing in a recomendations action
 
-
-
         private List<Product> GetNewProducts(int count)
         {
             return _db.Products
