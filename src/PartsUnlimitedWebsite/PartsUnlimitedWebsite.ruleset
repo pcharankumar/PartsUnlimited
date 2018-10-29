@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - SonarVSTSAnalysisPR3 Sonar way" ToolsVersion="15.0">
+  <Include Path="..\..\.sonarlint\sonarvstsanalysispr3csharp.ruleset" Action="Default" />
+</RuleSet>
