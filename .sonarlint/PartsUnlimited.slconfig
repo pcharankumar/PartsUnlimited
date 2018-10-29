@@ -1,0 +1,11 @@
+{
+  "ServerUri": "http://192.168.5.7:9000/",
+  "Organization": null,
+  "ProjectKey": "SonarVSTSAnalysisPR3",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AWYK4fuA6WCGtHhwuNIc",
+      "ProfileTimestamp": "2018-09-25T02:45:01-07:00"
+    }
+  }
+}
