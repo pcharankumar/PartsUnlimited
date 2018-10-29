@@ -82,10 +82,7 @@ public ActionResult Recomendations()
             return View();
         }
 
-
-        public ActionResult Recomendations501()
-
-        public ActionResult Recomendation2()
+        public ActionResult Recomendations3()
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
@@ -107,38 +104,12 @@ public ActionResult Recomendations()
             return View();
         }
 
-        public ActionResult Recomendation401()
-
-
-        //stubbing in a recomendations action
-        public ActionResult Recomendations338()
-
-        {
-            ViewBag.Message = "Your application description page.";
-            //See file /home/Recomendations.cshtml for initial rendering
-
-            // Group the order details by product and return
-            // the products the top recomendations for the recomendations page
-
-            int count = 0;
-            while (count < roco_count
-                   )
-            {
-                _db.Products
-                    .OrderByDescending(a => a.OrderDetails.Count())
-                    .Take(count++)
-                    .ToList();
-            }
-
-
-            return View();
-        }
 
         //stubbing in a recomendations action
 
 
 
-        public void demos() { }
+
 
         private List<Product> GetNewProducts(int count)
         {
