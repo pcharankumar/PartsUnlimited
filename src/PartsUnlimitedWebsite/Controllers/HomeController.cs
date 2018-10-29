@@ -83,7 +83,7 @@ public ActionResult Recomendations()
         }
 
 
-        public ActionResult Recomendations501()
+     
 
         public ActionResult Recomendation2()
         {
@@ -106,9 +106,7 @@ public ActionResult Recomendations()
 
             return View();
         }
-
-        public ActionResult Recomendation401()
-
+       
 
         //stubbing in a recomendations action
         public ActionResult Recomendations338()
