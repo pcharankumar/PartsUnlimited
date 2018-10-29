@@ -24,7 +24,9 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <UseGlobalApplicationHostFile />
     <ApplicationInsightsResourceId>/subscriptions/56fc2374-b7e8-4c14-b15c-a191b635762a/resourcegroups/PartsWeb/providers/microsoft.insights/components/partswebinsights</ApplicationInsightsResourceId>
+
     <Use64BitIISExpress />
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,8 +36,10 @@
     <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>PartsUnlimitedWebsite.ruleset</CodeAnalysisRuleSet>
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -337,6 +341,10 @@
     <None Include="Properties\PublishProfiles\partsunlimitedcus07.pubxml" />
     <None Include="Properties\PublishProfiles\PartsUnlimitedE2EDemo - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\PUL0Local.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Images\admin_icon.png" />
     <Content Include="Images\admin_mo_icon.png" />
@@ -507,6 +515,11 @@
     <Compile Include="Models\CommunityPost.cs" />
     <Compile Include="Models\ILineItem.cs" />
     <Compile Include="Models\OrderCostSummary.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DefaultShippingTaxCalculator.cs" />
     <Compile Include="Utils\EmptyTelemetryProvider.cs" />
     <Compile Include="Utils\IShippingTaxCalculator.cs" />
