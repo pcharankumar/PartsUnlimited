@@ -82,6 +82,9 @@ public ActionResult Recomendations()
             return View();
         }
 
+
+        public ActionResult Recomendation2()
+
         public ActionResult Recomendations331()
         {
             ViewBag.Message = "Your application description page.";
@@ -105,6 +108,7 @@ public ActionResult Recomendations()
         }
 
         public ActionResult Recomendations332()
+
         {
             ViewBag.Message = "Your application description page.";
             //See file /home/Recomendations.cshtml for initial rendering
